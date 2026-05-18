@@ -18,7 +18,7 @@ Prevent double payment
 Allow server continue other operations as it waits for the customer to finalize payment after putting their pin
 
 
-Why you need ngrok (or a real server) for the callback?
+Why you need ngrok (or a real server) for the callback??
 
 saf server or third purty servers need to talk to public servers so ngrok convers my local server url into public allowing it talk to safaricom server
 
