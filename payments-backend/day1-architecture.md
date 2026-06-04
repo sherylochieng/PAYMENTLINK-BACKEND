@@ -1,16 +1,6 @@
-Task 5: Write the payments architecture in your own words
 
-BIZ  OWNER TO SERVER TO CREATE LINK
-
-We start with initiall process wher biz owner creates payment link for customer
-FRONTEND -> CLICKScreate link -> enters customer detais -> server ->(cors + express.json) -> link.route.js(link created) -> database ( stores all data) -> 201 message sent to owner link created 
-
-LINK FROM BIZ OWNER TO CUSTOMER TO SERVER TO SAFARICOM
-LINK GENERATED SENT to Customer -> server -> safaricom(authentication and authorization) ->server callback sent to server(request accepted) -> safaricom sends promt to customer -> customer enters pin -> payment sealed -> server (status change to paid) -> frontend immediately sends succeess message to customer as receipt is being generated and sent to the customer and stored to database.
-
-
-
-## Payment Architecture - Day 1
+### QUIZ
+### Payment FLOW QUIZ - Day 1
 
 ### Why Daraja calls your server and not the other way around
 The STK push flow is initiated by your server, but the actual 
@@ -38,3 +28,14 @@ the customer paid but your system shows no payment leading to
 disputes, broken order flows, and a poor user experience. This is 
 why callback reliability is critical in payment systems.
 
+
+## TASK 5-Payment Flow 
+
+### Business Owner Creates a Payment Link
+The business owner fills in the customer's details on the React 
+frontend and clicks "Create Link". The request is sent to the 
+Express backend, which passes through CORS and JSON middleware 
+before reaching the payments route. The server creates the payment 
+link, stores the details in the database with a status of 
+"pending", and returns a 201 response confirming the link was 
+created.
